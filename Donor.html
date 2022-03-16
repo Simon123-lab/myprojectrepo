@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
+<title>Blood Donor</title>
+
+</head>
+<body style="background-image: url('https://static-communitytable.parade.com/wp-content/uploads/2014/03/rethink-target-heart-rate-number-ftr.jpg');">
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/3.2.1/firebase.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCqjAON0iUeVFuj4BxO8IoyXHqPN90-dNI",
+    authDomain: "fir-class-92334.firebaseapp.com",
+    databaseURL: "https://fir-class-92334.firebaseio.com",
+    projectId: "fir-class-92334",
+    storageBucket: "fir-class-92334.appspot.com",
+    messagingSenderId: "655745731257",
+    appId: "1:655745731257:web:e2192f255dafc8fba26968"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+  function writedata(){
+      firebase.database().ref("user").set({
+          name: document.getElementById("namefield").value,
+          age: document.getElementById("agefield").value
+
+      });
+  }
+
+</script>
+
+<input type="text" placeholder="name" id="namefield">
+<input type="text" placeholder="age" id="agefield">
+<button onclick="writedata()">Submit</button>
+
+    
+    
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
+	    <div class="container">
+        <a class="navbar-brand text-danger col-md-2" href="blooddonor.html"><span>Blood Bank</span></a>
+        <div class="row col-md-6" >
+	      
+	       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> MENU
+	      </button>
+
+	      <div class="collapse navbar-collapse " id="navbarNav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#" class="nav-link" data-nav-section="home"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#" class="nav-link" data-nav-section="about"><span>About</span></a></li>
+	          <li class="nav-item"><a href="Donor.html" class="nav-link"><span>Blood Donor</span></a></li>
+	          
+              <li class="nav-item"><a href="#" class="nav-link" data-nav-section="contact"><span>Contact</span></a></li>
+              
+              <li class="nav-item col"><a href="login.html" class="nav-link" data-nav-section="contact"><span>Login</span></a></li>
+             
+         
+	          
+
+	        </ul>
+	      </div>
+      </div>
+	    </div>
+	  </nav>
+    
+
+<section class="container">
+  <div class="container-fluid ">
+    <div class="row col-md-6 col-md-offset-3">
+    <form action="" method="post">
+		<h1 class="text-center font-weight-bold">BLOOD DONOR</h1>
+        <div class="form-group">
+			<div class="row">
+				<div class="col"><input type="text" class="form-control" name="first_name" placeholder="First Name" required="required"></div>
+				<div class="col"><input type="text" class="form-control" name="last_name" placeholder="Last Name" required="required"></div>
+			</div>        	
+        </div>
+        
+		<div class="form-group">
+            <input type="Phone" class="form-control" name="" placeholder="Phone Number" required="required">
+        </div>
+
+        
+
+        
+	
+        <div class="form-group">
+          <select class="form-control" name="Blood Group" required>
+            <option>Blood Group</option>
+            <option>A</option>
+            <option>A+</option>
+            <option>B</option>
+            <option>B+</option>
+            <option>O</option>
+            <option>O+</option>
+          </select>
+        </div>    
+        <div class="form-group">
+            <label for="birthday">Birthday</label>
+      <input type="date" id="birthday" name="birthday" class="form-control">
+      </div> 
+              
+       
+		<div class="form-group">
+            <button type="submit" class="btn btn btn-danger btn-lg btn-block" >Register Now</button>
+        </div>
+      </div>
+    </form>
+  </div>
+	</div>
+</section>
+
+
+
+
+</body>
+</html>
